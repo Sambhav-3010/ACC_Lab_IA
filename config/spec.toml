@@ -1,0 +1,36 @@
+[meta]
+spec_version = "1.0"
+
+[cluster]
+capacities = [1.0, 1.0, 1.0, 1.0]
+
+[model]
+n_estimators = 100
+max_depth = 12
+min_samples_leaf = 3
+random_state = 42
+
+[scenario.E1]
+name = "Stable traffic"
+duration_s = 180
+base_rate = 8.0
+
+[scenario.E2]
+name = "Gradual ramp"
+duration_s = 180
+base_rate = 5.0
+peak_rate = 17.0
+
+[scenario.E3]
+name = "Sudden spike"
+duration_s = 180
+base_rate = 7.0
+peak_rate = 18.0
+spike_start = 90.0
+spike_duration = 30.0
+
+[scenario.E4]
+name = "Heterogeneous capacities"
+duration_s = 180
+base_rate = 10.0
+capacities = [0.5, 1.0, 1.0, 1.5]

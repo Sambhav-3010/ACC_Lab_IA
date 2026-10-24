@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.aws.generated
+models/*.joblib
+results/*.csv
+results/*.json
+results/figures/
+results/runs/
+results/demo/
+data/generated/
+submission/
